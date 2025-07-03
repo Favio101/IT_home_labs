@@ -57,7 +57,7 @@ This repository documents my learning journey through hands-on projects that sim
 
 ## ✅ Project 2: SQL Basic Library Project
 
-**Goal:** Strengthen my understanding of relational databases and practice writing queries to extract meaningful insights from real-world business data.
+**Goal:** Strengthen my understanding of relational databases and practice writing queries to extract meaningful insights from real-world business data. I completed this project as part of my Database Programming transfer course for WGU.
 
 ### 🔧 Tasks:
 - Queried client borrowing behavior from a library database using SQL
