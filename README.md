@@ -55,7 +55,7 @@ This repository documents my learning journey through hands-on projects that sim
 
 ---
 
-## ✅ Project 2: SQL Practice Project
+## ✅ Project 2: SQL Basic Library Project
 
 **Goal:** Strengthen my understanding of relational databases and practice writing queries to extract meaningful insights from real-world business data.
 
