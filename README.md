@@ -14,6 +14,9 @@ This repository documents my learning journey through hands-on projects that sim
 - Networking Basics (IP configuration, DNS, NAT)
 - Troubleshooting Methodologies
 - System Configuration & Permissions
+- SQL Query Writing (JOINs, GROUP BY, HAVING, nested queries, VIEWS, creating tables, modifying tables)
+- Relational Database Design Concepts
+- Data Aggregation and Filtering for Business Use Cases
 
 ---
 
@@ -24,7 +27,7 @@ This repository documents my learning journey through hands-on projects that sim
 | Building Active Directory Domain in Windows Server 2025 VM| Installed and configured Windows Server in a VMware VM | VMware, Windows ISO, Active Directory |
 | *Coming soon...* Linux VM Setup | Create a Linux server and explore CLI | VMware, Ubuntu |
 | *Coming soon...* Basic Network Lab | Simulate home network issues and practice IP/DNS troubleshooting | CMD, ifconfig, VirtualBox |
-
+| SQL Basic Library Project | Wrote SQL queries to solve practical database problems involving clients, books, and borrow records | MySQL, SQL Workbench |
 ---
 
 ## ✅ Project 1: Building Active Directory Domain in Windows Server 2025 VM
@@ -51,6 +54,25 @@ This repository documents my learning journey through hands-on projects that sim
 - Managing OUs, Users, and Groups
 
 ---
+
+## ✅ Project 2: SQL Practice Project
+
+**Goal:** Strengthen my understanding of relational databases and practice writing queries to extract meaningful insights from real-world business data.
+
+### 🔧 Tasks:
+- Queried client borrowing behavior from a library database using SQL
+- Used `JOIN's and nested queries to combine data from multiple tables (e.g., clients, books, authors)
+- Filtered data using `WHERE`, `BETWEEN`, `IN`, and `YEAR()` functions
+- Aggregated data using `COUNT()`, `AVG()`, and `GROUP BY` clauses
+- Applied `HAVING`, `ORDER BY`, and `LIMIT` to control output and find top or least frequent values
+- Created a `VIEW` to store reusable results
+
+### 🧠 What I Learned:
+- How relational databases organize data across linked tables
+- Efficient ways to analyze trends using SQL (e.g., most borrowed genres, top borrowing occupations)
+- The role of `JOIN`s in combining data for analysis
+- How to think through and translate business-style questions into SQL logic
+
 
 ## 🪪 About Me
 
