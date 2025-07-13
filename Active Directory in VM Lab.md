@@ -41,3 +41,58 @@
 - Added users to groups
   
 ![Add User to Group](https://github.com/user-attachments/assets/a3b8296d-80e2-49ea-9f12-2fff12f6baad)
+
+# Implementing GPOs in the GPMC  (* = right click)
+1. Creating a Password GPO (enhances domain security and enforces strong passwords)
+   - Created a GPO, named "Password Policy" for Computer under the USA OU
+   - Navigation: "*Edit" ---> "Computer Configuration" --> "Policies" --> "Windows Settings" --> "Security Settings" --> "Account Policies" --> "Password Policy"
+   - Set the password expiration date to each quarter (90 days), set the minimum password length to 12 characters, and enabled password complexity requirements.
+   - Learned the basics of creating GPOs and establishing basic security measures
+     
+2. Drive Mapping with a GPO
+- Created a GPO, named "Drive Mapping", for Users under the USA OU
+- Navigation: "*Edit" ---> "User Configuration" --> "Preferences" --> "Windows Settings" --> "Drive Maps" --> "*New" --> "*Mapped Drive"
+- Set the location and drive letter for the new drive
+
+3. Setting a Desktop Wallpaper Policy (default wallpaper for all users)
+   - Created a GPO, named "Desktop Wallpaper" for Users under the USA OU
+   - Navigation: "*Edit" ---> "User Configuration" --> "Policies" --> "Administrative Templates..." --> "Desktop" --> "Desktop" --> "Desktop Wallpaper"
+   - Enabled desktop wallpaper policy and set the local path to the wallpaper 
+
+4. Restrict Access to Control Panel (prevent users from accessing Control Panel)
+   - Created a GPO, named "Restrict Control Panel" for Users under the USA OU
+   - Navigation: "*Edit" ---> "User Configuration" --> "Policies" --> "Administrative Templates..." --> "" --> "Control Panel" --> "Prohibit access to Control..."
+   - Enabled "Prohibit access to Control Panel and PC settings" in "Control Panel" configurations
+
+5. Disable USB Storage (security measure, prevents the use of USB storage devices)
+   - Created a GPO, named "Disable USB Devices", for Computer under the USA OU
+   - Navigation: "*Edit" ---> "Computer Configuration" --> "Policies" --> "Administrative Templates..." --> "System" --> "Removable Storage Access" --> "All Removable Storage Classes: Deny all access"
+   - Enabled setting to deny access to removable storage
+
+6. Account Lockout GPO (helps prevent brute force attacks)
+   - Created a GPO, named "Account Lockout Policy", for Computer under the USA OU
+   - Navigation: "*Edit" ---> "Computer Configuration" --> "Policies" --> "Windows Settings" --> "Security Settings" --> "Account Policies" --> "Account Lockout Policy"
+   - Set the account lockout threshold to 3 attempts and the lockout duration to 30 minutes
+
+
+#Applying and Testing GPOs 
+- Downloaded Windows 11 Enterprise
+- Setup another VM, but with Windows 11 Enterprise
+- VM specs:
+
+1. Set up DNS server 
+  - Set up a static IP address and configured the DNS address (used loopback address) (on domain controller)
+  - Verified IP addresses with "ipconfig /all" in command line
+    
+  - Changed DNS server address on client VM to the host VM DNS server address
+  - Verified DNS server address configuration and resolution on client VM through the command line ("ipconfig /all" and "nslookup")
+    
+  - Joined the domain on the client VM through the Settings app and signed in with user "John Snith" which I created earlier as part of the USA OU
+  - Moved the client VM computer to the Computers OU under USA in the Active Directory Users and Computers
+  - Used "gpupdate /force" and verified that GPOs are functional (control panel was inaccessible for John Smith, had default wallpaper, mapped drive, etc)
+     
+
+
+
+
+
