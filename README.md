@@ -17,14 +17,15 @@ This repository documents my learning journey through hands-on projects that sim
 - SQL Query Writing (JOINs, GROUP BY, HAVING, nested queries, VIEWS, creating tables, modifying tables)
 - Relational Database Design Concepts
 - Data Aggregation and Filtering for Business Use Cases
-
+- Active Directory Setup and Navigation
+- DNS Server Configuration
 ---
 
 ## 🧰 Project Index
 
 | Project | Description | Tools |
 |--------|-------------|-------|
-| Building Active Directory Domain in Windows Server 2025 VM| Installed and configured Windows Server in a VMware VM | VMware, Windows ISO, Active Directory |
+| Building Active Directory Domain in Windows Server 2025 VM| Installed and configured Windows Server in a VMware VM and practiced creating GPOs | VMware, Windows ISO, Active Directory, Group Policy Management|
 | *Coming soon...* Linux VM Setup | Create a Linux server and explore CLI | VMware, Ubuntu |
 | *Coming soon...* Basic Network Lab | Simulate home network issues and practice IP/DNS troubleshooting | CMD, ifconfig, VirtualBox |
 | SQL Basic Library Project | Wrote SQL queries to solve practical database problems involving clients, books, and borrow records | MySQL, SQL Workbench |
@@ -37,7 +38,7 @@ This repository documents my learning journey through hands-on projects that sim
 ### 🔧 Steps:
 - Downloaded and installed VMware
 - Downloaded official Windows Server 2025 ISO from Microsoft
-- Created a VM with:
+- Created a VM Windows Server with:
   - 4 GB RAM
   - 60 GB virtual hard drive
   - Default NAT networking
@@ -45,6 +46,8 @@ This repository documents my learning journey through hands-on projects that sim
 - Created an Active Directory Domain and set up a server as the domain controller
 - Create OUs, Users, and Groups
 - Added Users to Groups
+- Set up the domain controller as a DNS Server, including static IP address and DNS Server address configuration
+- Added additional VMs, running Windows 11 Enterprise, to the domain and tested GPOs
 
 ### 🧠 What I Learned:
 - How to mount ISO files and boot from them
@@ -52,6 +55,9 @@ This repository documents my learning journey through hands-on projects that sim
 - The purpose of virtualization for lab and enterprise environments
 - Navigating an Active Directory
 - Managing OUs, Users, and Groups
+- Creating GPOs
+- Configuring a DNS Server
+- Adding physical devices to a domain
 
 ---
 
